@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proof-ccc"
+version = "0.1.0"
+description = "Leakage-controlled ligand-receptor prioritization and receptor-conditioned cell-cell communication scoring"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+license = {text = "MIT"}
+authors = [{name = "PROOF-CCC authors"}]
+dependencies = [
+  "numpy==1.26.4",
+  "pandas==2.2.2",
+  "scikit-learn==1.5.1",
+  "scipy==1.13.1",
+  "joblib==1.4.2",
+  "tqdm==4.66.4",
+]
+
+[project.optional-dependencies]
+model = [
+  "torch==2.3.1",
+  "esm==3.1.1",
+]
+test = ["pytest==8.2.2"]
+
+[project.scripts]
+proofccc-communication = "proofccc.cli:communication_main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["proofccc*"]

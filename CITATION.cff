@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use PROOF-CCC, please cite the associated manuscript."
+title: "PROOF-CCC"
+type: software
+version: 0.1.0
+date-released: 2026-07-20
+license: MIT
+authors:
+  - family-names: "Gao"
+    given-names: "Pengfei"
+  - family-names: "Zhang"
+    given-names: "Yumeng"
+  - family-names: "Zou"
+    given-names: "Quan"
+  - family-names: "Zhang"
+    given-names: "Zilong"
+  - family-names: "Yao"
+    given-names: "Yuhua"
+  - family-names: "Cui"
+    given-names: "Feifei"
+repository-code: "https://github.com/gaopfnice/PROOF_CCC"

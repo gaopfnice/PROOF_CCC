@@ -1,0 +1,26 @@
+# The experiment scripts currently use command-line arguments. This file records
+# the final benchmark configuration for provenance and can be translated into
+# the command shown in docs/TUTORIAL.md.
+datasets: [human, mouse, mouse-heart, dataset4]
+model_name: esmc_600m
+seed: 20260520
+repeats: 20
+outer_folds: 5
+negative_ratio: 1.0
+inner_oof_folds: 5
+inner_validation_fraction: 0.18
+max_residues: 512
+chunk_length: 1022
+pair_encoder:
+  protein_dim: 256
+  hidden_dim: 384
+  pair_attention_dim: 128
+  experts: 6
+  dropout: 0.25
+  epochs: 80
+  patience: 14
+final_classifier:
+  type: three_member_fixed_ft_transformer_ensemble
+  epochs: 180
+  patience: 25
+threshold_rule: balance4_on_validation_only
